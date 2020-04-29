@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/half_standard_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/half_standard_margin"
+    app:cardElevation="@dimen/half_standard_margin">
+
+    <TextView
+        android:id="@+id/short_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/standard_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_size_16sp"
+        tools:text="Recipe Introduction" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BakingApp</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="navigate_to_the_next_step">Next Step</string>
+    <string name="navigate_to_the_previous_step">Previous Step</string>
+    <string name="steps_done">Steps done! Go to recipes list!</string>
+    <string name="go_back">Go Back</string>
+    <string name="no_selected_step">No selected step!</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="exoplayer_codelab">exoplayer-codelab</string>
+    <string name="error_loading_recipes">Error loading recipes!</string>
+</resources>

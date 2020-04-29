@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37334c</color>
+    <color name="colorPrimaryDark">#37334c</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBackgroundLayouts">#29253c</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_orange">#f99f02</color>
+    <color name="color_orangev2">#8e2702</color>
+    <color name="color_near_black">#CC000000</color>
+    <color name="color_near_white">#FFBEBEBE</color>
+    <color name="color_black">#000000</color>
+    <color name="second_colorBackgroundLayouts">#423d5d</color>
+    <color name="selected_step_color">#b5a8ff</color>
+</resources>

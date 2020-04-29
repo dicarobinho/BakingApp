@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundLayouts">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_media_player"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_height_250dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/half_standard_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/half_standard_margin"
+            app:cardElevation="@dimen/half_standard_margin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/display_video_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/video_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/color_near_black"
+                    app:controller_layout_id="@layout/custom_playback_control"
+                    app:fastforward_increment="30000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:player_layout_id="@layout/exo_simple_player_view"
+                    app:repeat_toggle_modes="none"
+                    app:rewind_increment="30000"
+                    app:show_timeout="10000"
+                    app:surface_type="texture_view" />
+
+                <ProgressBar
+                    android:id="@+id/spinnerVideoDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/half_standard_margin"
+                    android:layout_marginTop="@dimen/half_standard_margin"
+                    android:layout_marginEnd="@dimen/half_standard_margin"
+                    android:layout_marginBottom="@dimen/half_standard_margin"
+                    android:indeterminate="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image_no_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/novideo"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/half_standard_margin"
+            android:background="@drawable/touch_effect_buttons"
+            android:padding="@dimen/standard_margin"
+            android:textColor="@color/color_black"
+            tools:text="2. Whisk the graham cracker crumbs, 50 grams (1/4 cup) of sugar, and 1/2 teaspoon of salt together in a medium bowl. Pour the melted butter and 1 teaspoon of vanilla into the dry ingredients and stir together until evenly mixed." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/half_standard_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/previous_step_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/width_height_70dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_weight="1"
+                android:background="@drawable/touch_effect_buttons"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/half_standard_margin"
+                android:text="@string/navigate_to_the_previous_step"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/next_step_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/width_height_70dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/touch_effect_buttons"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/navigate_to_the_next_step"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
